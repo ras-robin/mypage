@@ -1,0 +1,173 @@
+
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" media="(min-width: 640px)" href="all_pc.css">
+<link rel="stylesheet" media="(max-width: 640px)" href="all_smp.css">
+
+<script src="jQuery 3.5.1.js"></script>
+<link href="flexslider.css" rel="stylesheet">
+<script src="jquery.flexslider-min.js"></script>
+<script>
+  $(function(){
+    $('.flexslider').flexslider({
+      animation: "slide"
+    });
+  });
+</script>
+
+<script>
+	function showName(){
+		var n = document.form1.stname.value;
+		alert("Hello Mr/Ms " + n);
+	}
+	
+	function displayGender(){
+		for(var i=0; i<document.form2.gender.length; i++){
+			if(document.form2.gender[i].checked){
+			alert(document.form2.gender[i].value);
+			}
+		}
+		alert('You did not select gender.'):
+		}
+	function displayLanguage(){
+		var languages='':
+		for(var i=0;i<document.form3.lang.length; i++){
+			if(document.form3.lang[i].checked){
+				languages = languages + document.form3.lang[i].value + '';
+			}
+			}
+			if(languages==''){
+			alert('You did not choose the language'):
+		}else{
+			alert(languages);
+	}
+}
+	function displaySelected(){
+		var options=document.form4.books.options;
+		for (var i=0;i<document.form4.books.options.length;i++){
+			if(document.form4.books.options[i].selected){
+				alert("You selected" + document.form4.books.options[i].text):
+			}
+		}
+	}
+		
+	var w = null;
+	function openWindow(){
+		w = open ('http://www.kcg.edu', 'KCGI', 'width=600px, height=480px');
+	}
+	function closeWindow(){
+		if(w){
+			w.close();
+		w = null;
+		}
+	}
+	
+	function showing1(){
+			document.areal.src="img/9.jpg"
+	}
+	function showing2(){
+			document.areal.src="img/10.jpg"
+	}
+	function showing3(){
+			document.areal.src="img/11.jpg"
+	}
+		
+	
+</script>
+
+</head>
+
+<body style="background-image:url(color.jpg);">
+<div id="pagebody" style="height: 1900px;">
+	<header>
+	<div class="flexslider" style="border-color:#CFC;;">
+      <ul class="slides">
+        <li><img src="img/1.jpg" /></li>
+        <li><img src="img/2.jpg" /></li>
+        <li><img src="img/3.jpg" /></li>
+        <li><img src="img/4.jpg" /></li>
+        <li><img src="img/5.jpg" /></li>
+        <li><img src="img/6.jpg" /></li>
+        <li><img src="img/7.jpg" /></li>
+        <li><img src="img/8.jpg" /></li>
+      </ul>
+    </div>
+
+    <div class="topnav">
+    	<div class="topnavde"><a href="index.html"><b>Top page</b></a></div>
+			<div class="topnavde"><a href="js1.html"><b>Score</b></a></div>
+			<div class="topnavde"><a href="js2.html"><b>Shop</b></a></div>
+			<div class="topnavde"><a href="js3.html"><b>JS World</b></a></div>
+			<div class="topnavde"><a href="js4.html"><b>Form</b></a></div>
+			<div class="topnavde"><a href="js5.html"><b>Map</b></a></div>
+			<div class="topnavde"><a href="js6.html"><b>Anima</b></a></div>
+    </div>
+    
+	</header>
+
+	<div class="container" style="height: 1300px;">
+	
+		<h1>Welcome to the world of JavaScript<h1>
+			
+				<form name="form1">
+					<h3>1. Please input your lastname. </h3>
+					<input type="text" name="yourname"/>
+					<input type="button" value="click" onclick="alert('Hello. Mr/Ms '+document.form1.yourname.value)" />
+				    </form>
+					
+					
+				<form name="form2">
+					<h3>2. Please input your Gender. </h3>
+					<input type="radio" value="male" name="gender"/>male
+					<input type="radio" value="female" name="gender"/>female
+					
+					<input type="button" value="Choose your gender" onclick="alert('You are '+ document.form2.gender.value)">
+				    </form>
+					
+					
+				<form name="form3">
+					<h3>3. Please select the Language. </h3>
+					<input type="checkbox" name="lang" value="Japanese ">Japanese
+					<input type="checkbox" name="lang" value="English ">English
+					<input type="checkbox" name="lang" value="Chinese ">Chinese
+					<input type="checkbox" name="lang" value="Bengali ">Bengali
+					
+					<input type="button" value="Choose the language you have learned" onclick="displayLanguage()">
+				    </form>
+					
+					
+				<form name="form4">
+					<h3>4. Please select the course in KCGI. </h3>
+					<select name="books">
+						<option value="0">Web Programming</option>
+						<option value="1">Business Data Analytics</option>
+						<option value="2">Introduction to Web Business</option>
+						<option value="3">Machine Learning</option> 
+						<br />
+					<input type="button" value="Choose the course" onclick="displaySelected()">
+					</select>
+				    </form>
+				
+					
+					<h3>5. Open and Close a window</h3>
+					<input type="button" value="Open the window" onclick="openWindow()"/>
+					<input type="button" value="Close the window" onclick="closeWindow()"/>
+					<input type="button" value="window.scrollTo(0, 0)" onclick="window.scrollTo(0, 0)"/>
+					<br/>
+					<h3>6.Try Mouseover and Mouseout (Sunset & Sunrise)</h3>
+					<img src="img/sunrise.jpg" width="200" onmouseover="this.src='img/sunset.jpg'" onmouseout="this.src='img/sunrise.jpg'">
+					<br/>
+					<h3>7. Change Pictures</h3>
+					<input type="button" value="Autumn" onclick="showing1()"/>
+					<input type="button" value="Fujisan" onclick="showing2()"/>
+					<input type="button" value="Winter" onclick="showing3()"/>
+					<br/>
+					<img src="img/9.jpg" name="areal" width=200 height=200>
+	</div>
+	
+	<footer>Copyright (C) 2022s copyrights. ROBIN.All Rights Reserved.</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,87 @@
+
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" media="(min-width: 640px)" href="all_pc.css">
+<link rel="stylesheet" media="(max-width: 640px)" href="all_smp.css">
+
+<script src="jQuery 3.5.1.js"></script>
+<link href="flexslider.css" rel="stylesheet">
+<script src="jquery.flexslider-min.js"></script>
+<script>
+  $(function(){
+    $('.flexslider').flexslider({
+      animation: "slide"
+    });
+  });
+</script>
+
+<style>
+#readmorearea{
+	display:none;
+}
+</style>
+
+<script>
+function changeContent(){
+	document.getElementById("readmorearea").style.display="block";
+	document.getElementById("Details").style.display="none";
+}
+
+function changeContent2(){
+	document.getElementById("readmorearea").style.display="none";
+	document.getElementById("Details").style.display="block";
+}
+</script>
+
+
+</head>
+
+<body style="background-image:url(color.jpg);">
+<div id="pagebody" style="height: 1200px;">
+	<header>
+	<div class="flexslider" style="border-color:#CFC;;">
+      <ul class="slides">
+        <li><img src="img/1.jpg" /></li>
+        <li><img src="img/2.jpg" /></li>
+        <li><img src="img/3.jpg" /></li>
+        <li><img src="img/4.jpg" /></li>
+        <li><img src="img/5.jpg" /></li>
+        <li><img src="img/6.jpg" /></li>
+        <li><img src="img/7.jpg" /></li>
+        <li><img src="img/8.jpg" /></li>
+      </ul>
+    </div>
+
+    <div class="topnav">
+    	<div class="topnavde"><a href="index.html"><b>Top page</b></a></div>
+			<div class="topnavde"><a href="js1.html"><b>Score</b></a></div>
+			<div class="topnavde"><a href="js2.html"><b>Shop</b></a></div>
+			<div class="topnavde"><a href="js3.html"><b>JS World</b></a></div>
+			<div class="topnavde"><a href="js4.html"><b>Form</b></a></div>
+			<div class="topnavde"><a href="js6.html"><b>Anima</b></a></div>
+    </div>
+    
+	</header>
+
+	<div class="container" style="height: 600px;">
+		
+<h1 style="margin-top:30px;text-align:center;">KCGI</h1>
+<p>The KCGI is committed to train highly specialized professionals of applied information technology.</p>
+
+<input type="button" value="Details" id="Details" onclick="changeContent();">
+
+<div id="readmorearea">
+<p>The KCGI values education as a significant means to achieve social prosperity and happiness. We are committed to respond to the various sophisticated needs of the current IT 
+community, and to provide well-trained and highly specialized IT professionals to the world, the KCGI, with the visions of this coming ubiquitous era, will contribute to the 
+development of a highly information-oriented society and economic recovery of Japan. </p>
+<input type="button" value="Abbrevation" id="Abbreviation" onclick="changeContent2();">
+</div>
+
+	</div>
+	
+	<footer>Copyright (C) 2022s copyrights. ROBIN.All Rights Reserved.</footer>
+</div>
+</body>
+</html>
